@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@keyframes rotateClockwise {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+:root {
+    --primary: rgb(0, 203, 218);
+    --dark: #012247;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: var(--dark);
+}
+
+.background {
+    width: 700px;
+    margin: 0 auto;
+    top: 200px;
+    position: relative;
+    animation: rotateClockwise 20s linear infinite;
+    /* Agregado: animación de rotación */
+}
+
+.background .shape {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape:first-child {
+    background: linear-gradient(var(--dark), var(--primary));
+    left: 0px;
+    top: 0px;
+}
+
+.shape:last-child {
+    background: linear-gradient(var(--primary), var(--dark));
+    right: 0px;
+    bottom: 0px;
+}
+
+.wrapper,
+.wrapper .img-area,
+.social-icons a,
+.buttons button {
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    /* Agregado para centrar contenido */
+}
+
+.wrapper {
+    position: relative;
+    width: 350px;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.wrapper .img-area {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.13);
+}
+
+.img-area .inner-area {
+    position: relative; 
+    top: 50%; 
+    transform: translateY(-50%);
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    border-radius: 50%;
+    margin: 0 auto;
+    align-items: center;
+    background-color: white;
+}
+
+.inner-area img {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.wrapper .name {
+    font-size: 25px;
+    color: white;
+    margin: 0 0 25px 0;
+    text-align: center;
+}
+
+.wrapper .about {
+    color: rgba(255, 255, 255, 0.897);
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    margin-top: 15px;
+    /* Ajuste de margen superior */
+    margin-bottom: 15px;
+    /* Ajuste de margen inferior */
+}
+
+.wrapper .social-icons {
+    margin-top: 25px;
+    /* Ajuste de margen superior */
+    margin-bottom: 10px;
+    /* Ajuste de margen inferior */
+    text-align: center;
+    /* Agregado para centrar contenido */
+}
+
+.social-icons a {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 2px;
+    text-decoration: none;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.social-icons a:hover::before,
+.wrapper .icon:hover::before,
+.buttons button:hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    background: #ecf0f3;
+    box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1;
+}
+
+.social-icons a i {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.social-icons a {
+    color: var(--primary);
+}
