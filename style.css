@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
 
-@keyframes rotateClockwise {
+/* @keyframes rotateClockwise {
     from {
         transform: rotate(0);
     }
@@ -8,7 +8,7 @@
     to {
         transform: rotate(360deg);
     }
-}
+} */
 
 :root {
     --primary: rgb(0, 203, 218);
@@ -31,7 +31,7 @@
 body {
     min-width: 360px;
     background-color: var(--dark);
-    padding:10px;
+    padding: 10px;
 
     overflow-x: hidden;
     max-width: 100%;
@@ -40,28 +40,26 @@ body {
 .background {
     position: relative;
     top: 180px;
-    animation: rotateClockwise 80s linear infinite;
-    max-width: 800px;
-    margin: 0 auto;
+    /* animation: rotateClockwise 80s linear infinite; */
 }
 
 .shape:first-child {
     position: fixed;
-    top: 100px;
-    left: 100px;
+    top: 70px;
+    left: 70px;
 
-    color: rgba(0, 203, 218, 0.3);
-    font-size: 150px;
+    color: rgba(0, 203, 218, 0.1);
+    font-size: 250px;
     font-weight: 900;
 }
 
 .shape:last-child {
     position: fixed;
-    right: 100px;
-    bottom: 100px;
+    right: 70px;
+    bottom: 70px;
 
-    color: rgba(0, 203, 218, 0.3);
-    font-size: 150px;
+    color: rgba(0, 203, 218, 0.1);
+    font-size: 250px;
     font-weight: 900;
 }
 
@@ -116,6 +114,12 @@ body {
     height: 140px;
     width: 140px;
     border-radius: 50%;
+    transition: ease 0.5s;
+}
+
+.img-area:hover {
+    height: 200px;
+    width: 200px;
 }
 
 .img-area .inner-area {
@@ -156,8 +160,8 @@ body {
 
 .social-icons a {
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     margin: 9px;
 
     border-radius: 50%;
@@ -179,7 +183,7 @@ body {
     color: rgb(0, 238, 255);
     position: relative;
     font-size: 25px;
-    line-height: 35px;
+    line-height: 41px;
 }
 
 /*------ Card end-------*/
@@ -197,11 +201,24 @@ body {
     color: var(--primary);
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
+
+    transition: ease 0.5s;
+
 }
 
 .info h2 {
     margin-bottom: 15px;
 }
+
+.info:hover {
+    color: var(--primary);
+    background-color: var(--dark);
+    scale: 105%;
+}
+
+
+
+
 
 footer {
     text-align: center;
@@ -209,6 +226,6 @@ footer {
     margin: 70px auto;
 
     font-size: small;
-color: rgb(122, 181, 206);
+    color: rgb(122, 181, 206);
 
 }
