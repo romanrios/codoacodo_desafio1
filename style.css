@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
 
 @keyframes rotateClockwise {
     from {
@@ -29,34 +29,36 @@
 
 /*------ Background -------*/
 body {
-    max-width: 100%;
+    min-width: 360px;
     background-color: var(--dark);
 }
 
 .background {
-    position: absolute;
-    top: 280px;
-    left: 50%;
+    position: relative;
+    top: 180px;
     animation: rotateClockwise 80s linear infinite;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-
 .shape:first-child {
-    position: absolute;
+    position: fixed;
     top: 100px;
     left: 100px;
-    color: var(--primary);
+
+    color: rgba(0, 203, 218, 0.3);
     font-size: 150px;
     font-weight: 900;
 }
 
 .shape:last-child {
-    position: absolute;
-    color: var(--primary);
-    font-size: 150px;
-    font-weight: 900;
+    position: fixed;
     right: 100px;
     bottom: 100px;
+
+    color: rgba(0, 203, 218, 0.3);
+    font-size: 150px;
+    font-weight: 900;
 }
 
 /*------ Background End -------*/
@@ -67,12 +69,12 @@ body {
 
 
 
-
-/*------ Container -------*/
+/*------ Card Containter -------*/
 .container,
 .container .img-area,
 .social-icons a {
     margin: 0 auto;
+
     background-color: rgba(255, 255, 255, 0.13);
     border-radius: 10px;
     backdrop-filter: blur(10px);
@@ -81,25 +83,34 @@ body {
 }
 
 .container {
-    position: relative;
-    max-width: 400px;
-    min-width: 320px;
-    padding: 30px;
-    border-radius: 10px;
-    margin-top: 50px;
+    /* position: relative; */
+    margin-top: 30px;
     margin-bottom: 50px;
+    padding: 30px;
+    max-width: 450px;
+    min-width: 340px;
+
+    border-radius: 10px;
 }
 
+
+/*------ Card Title -------*/
 .container .name {
-    font-size: 25px;
-    color: white;
+    letter-spacing: 0.2px;
+    color: rgb(1, 34, 71);
+    background-color: rgba(0, 203, 218, 1);
+    padding: 8px;
     margin: 0 0 25px 0;
     text-align: center;
+    border-radius: 10px;
+
 }
 
+
+/*------ Card Image -------*/
 .container .img-area {
-    height: 170px;
-    width: 170px;
+    height: 140px;
+    width: 140px;
     border-radius: 50%;
 }
 
@@ -107,11 +118,10 @@ body {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    height: calc(100% - 20px);
-    width: calc(100% - 20px);
+    height: calc(100% - 8px);
+    width: calc(100% - 8px);
     border-radius: 50%;
     margin: 0 auto;
-    align-items: center;
     background-color: white;
 }
 
@@ -122,17 +132,21 @@ body {
     object-fit: cover;
 }
 
+
+/*------ Card Text -------*/
 .container .about {
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.897);
-    letter-spacing: 0.3px;
-    margin-top: 15px;
+    color: rgb(255, 255, 255);
+    line-height: 1.5rem;
+    letter-spacing: 0.01rem;
+    margin-top: 18px;
     margin-bottom: 15px;
 }
 
+
+/*------ Card Icons -------*/
 .container .social-icons {
-    margin-top: 25px;
-    margin-bottom: 10px;
+    margin: 0 auto;
+    max-width: 300px;
     text-align: center;
 }
 
@@ -140,26 +154,57 @@ body {
     display: inline-block;
     width: 40px;
     height: 40px;
-    margin: 5px;
+    margin: 9px;
+
     border-radius: 50%;
 }
 
 .social-icons a:hover::before {
-    content: "";
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
+
+    content: "";
     border-radius: 50%;
     background: #ecf0f3;
 }
 
 .social-icons a i {
-    color: var(--primary);
+    color: rgb(0, 238, 255);
     position: relative;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 35px;
 }
 
-/*------ Container end-------*/
+/*------ Card end-------*/
+
+
+
+/*------ Info & footer-------*/
+.info {
+    max-width: 450px;
+    padding: 30px 20px;
+    margin: 40px auto;
+
+    line-height: 1.6rem;
+    font-size: medium;
+    color: var(--primary);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.info h2 {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    max-width: 450px;
+    margin: 70px auto;
+
+    font-size: small;
+color: rgb(122, 181, 206);
+
+}
