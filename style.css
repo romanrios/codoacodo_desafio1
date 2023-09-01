@@ -31,6 +31,10 @@
 body {
     min-width: 360px;
     background-color: var(--dark);
+    padding:10px;
+
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 .background {
