@@ -116,12 +116,6 @@ body {
     height: 140px;
     width: 140px;
     border-radius: 50%;
-    transition: ease 0.5s;
-}
-
-.img-area:hover {
-    height: 200px;
-    width: 200px;
 }
 
 .img-area .inner-area {
